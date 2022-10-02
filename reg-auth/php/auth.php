@@ -10,10 +10,4 @@
         echo "Такой пользователь не найден";
         exit();
     }
-    
-    setcookie('user', $user['login'], time() + 3600, "/");
-
-    $mysql -> close;
-
-    header('Location: /');
 ?>
