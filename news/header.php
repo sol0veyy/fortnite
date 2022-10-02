@@ -12,7 +12,7 @@
     <div class="header">
         <ul>
             <li><a href="../profile/">Профиль</a></li>
-            <li><a href="/news/">Главная</a></li>
+            <li><a href="../index.php">Главная</a></li>
             <li><a href="/news/">Новости</a></li>
             <li><a href="#">Сообщества</a></li>
             <li><a href="#">Правила</a></li>
