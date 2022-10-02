@@ -11,7 +11,7 @@
         exit();
     }
 
-    $mysql = new mysqli('localhost', 'root', 'root', 'fortnite');
+    require('../../mysql.php');
     $mysql -> query("INSERT INTO `user` (`login`, `pass`)
     VALUES('$login', '$pass')");
 

@@ -2,7 +2,7 @@
     $login = filter_var(trim($_POST['login']));
     $pass = filter_var(trim($_POST['pass']));
 
-    $mysql = new mysqli('localhost', 'root', 'root', 'fortnite');
+    require('../../mysql.php');
 
     $result = $mysql -> query("SELECT * FROM `user` WHERE `login` = '$login' AND `pass` = '$pass'");
     $user = $result -> fetch_assoc();

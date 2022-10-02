@@ -1,5 +1,5 @@
 <?php
-    $mysql = new mysqli('localhost', 'root', 'root', 'fortnite');
+    require('../mysql.php');
     $sql = 'SELECT photo FROM user';
     $result = mysqli_query($mysql, $sql);
     $photo = mysqli_fetch_array($result);

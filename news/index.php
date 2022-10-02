@@ -1,5 +1,5 @@
 <?php
-    $mysql = new mysqli('localhost', 'root', 'root', 'fortnite');
+    require('../mysql.php');
     $result = $mysql -> query("SELECT * FROM `news`");
 ?>
 
