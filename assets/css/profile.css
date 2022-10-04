@@ -1,0 +1,27 @@
+body {
+    font-size: 20px;
+}
+
+.photo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.photo img {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.reg-auth a {
+    margin-left: 20px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.reg-auth a:hover {
+    color: red;
+}
+
