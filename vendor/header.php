@@ -11,9 +11,9 @@
 <body>
     <div class="header">
         <ul>
-            <li><a href="../profile/">Профиль</a></li>
+            <li><a href="../profile.php">Профиль</a></li>
             <li><a href="../index.php">Главная</a></li>
-            <li><a href="/news/">Новости</a></li>
+            <li><a href="../news.php">Новости</a></li>
             <li><a href="#">Сообщества</a></li>
             <li><a href="#">Правила</a></li>
             <li><a href="#">Контакты</a></li>

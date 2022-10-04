@@ -8,6 +8,6 @@
     <title>Главная</title>
 </head>
 <body>
-    <?php require('news/header.php'); ?>
+    <?php require('vendor/header.php'); ?>
 </body>
 </html>
