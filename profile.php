@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require('vendor/mysql.php');
     $sql = 'SELECT photo FROM user';
     $result = mysqli_query($mysql, $sql);
@@ -17,11 +18,20 @@
 </head>
 <body>
     <?php require('vendor/header.php') ?>
-    <div class="photo">
+    <div class="profile">
         <img src="<?= $photo['photo'] ?>" alt="">
-    </div>
-    <div class="reg-auth">
-        <a href="auth.php">Авторизоваться</a>
+    <?php
+        if ($_SESSION['user']['login']) {
+            echo '<p> ' . $_SESSION['user']['login'] . ' </p>';
+            echo '<a href="vendor/exit.php">Выйти</a>';
+        } else {
+            echo '
+            <div class="reg-auth">
+                <a href="auth.php">Авторизоваться</a>
+            </div>
+            ';
+        }
+    ?>
     </div>
 </body>
 </html>

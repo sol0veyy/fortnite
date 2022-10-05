@@ -1,13 +1,25 @@
 <?php
+    session_start();
+    require_once 'mysql.php';
+
     $login = filter_var(trim($_POST['login']));
     $pass = filter_var(trim($_POST['pass']));
 
-    require('../../mysql.php');
+    $result = mysqli_query($mysql, "SELECT * FROM `user` WHERE `login` = '$login' AND `pass` = '$pass'");
+    if (mysqli_num_rows($result) > 0) {
 
-    $result = $mysql -> query("SELECT * FROM `user` WHERE `login` = '$login' AND `pass` = '$pass'");
-    $user = $result -> fetch_assoc();
-    if (count($user) == 0) {
-        echo "Такой пользователь не найден";
-        exit();
+        $user = mysqli_fetch_assoc($result);
+
+        $_SESSION['user'] = [
+            "id" => $user['id'],
+            "login" => $user['login'],
+            "pass" => $user['pass'],
+            "photo" => $user['photo']
+        ];
+
+        header('Location: ../profile.php');
+
+    } else {
+        echo "Неверный логин или пароль";
     }
 ?>

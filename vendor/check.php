@@ -17,5 +17,5 @@
 
     $mysql -> close;
 
-    header('Location: /');
+    header('Location: ../profile.php');
 ?>

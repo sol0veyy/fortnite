@@ -2,12 +2,20 @@ body {
     font-size: 20px;
 }
 
-.photo {
+.profile {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: 20px;
     margin-left: 20px;
 }
 
-.photo img {
+.profile p {
+    font-weight: bold;
+}
+
+.profile img {
     width: 150px;
     border-radius: 50%;
     border: 2px solid black;
