@@ -11,7 +11,7 @@
         exit();
     }
 
-    require('../../mysql.php');
+    require('mysql.php');
     $mysql -> query("INSERT INTO `user` (`login`, `pass`)
     VALUES('$login', '$pass')");
 

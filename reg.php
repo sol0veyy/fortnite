@@ -15,7 +15,7 @@
     <div class="main">
         <div class="auth">
             <h1>Регистрация</h1>
-            <form action="php/check.php" method="post">
+            <form action="vendor/check.php" method="post">
                 <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
                 <br>
                 <input type="password" class="form-control" name="pass" id="pass" placeholder="Пароль">
