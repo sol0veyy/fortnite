@@ -1,4 +1,5 @@
 <?php 
-    setcookie('user', $user['login'], time() - 3600, "/");
-    header('Location: /');
+    session_start();
+    unset($_SESSION['user']);
+    header('Location: ../auth.php');
 ?>
