@@ -19,13 +19,14 @@
 <body>
     <?php require('vendor/header.php') ?>
     <div class="profile">
-        <img src="<?= $photo['photo'] ?>" alt="">
     <?php
         if ($_SESSION['user']['login']) {
+            echo '<img src="' . $_SESSION['user']['photo'] . '">';
             echo '<p> ' . $_SESSION['user']['login'] . ' </p>';
             echo '<a href="vendor/exit.php">Выйти</a>';
         } else {
             echo '
+            <img src="image/avatar.png">
             <div class="reg-auth">
                 <a href="auth.php">Авторизоваться</a>
             </div>

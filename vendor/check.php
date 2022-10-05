@@ -15,7 +15,5 @@
     $mysql -> query("INSERT INTO `user` (`login`, `pass`)
     VALUES('$login', '$pass')");
 
-    $mysql -> close;
-
-    header('Location: ../profile.php');
+    header('Location: ../auth.php');
 ?>

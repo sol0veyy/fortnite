@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: gray;
+    background-color: #F1F4F6;
 }
 
 .comm_block {
@@ -13,11 +13,12 @@ body {
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(67, 67, 134);
+    background-color: #fff;
+    box-shadow: 0 0 10px #888888;
 }
 
 .block__community {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid #464646;
     padding: 20px 20px;
     display: flex;
 }
@@ -25,7 +26,7 @@ body {
 .block__community p {
     font-weight: bold;
     display: block;
-    margin-top: 70px;
+    color: gray;
 }
 
 .block__community img {
@@ -38,4 +39,6 @@ body {
 .info_comm {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-evenly;
 }
