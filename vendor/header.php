@@ -14,7 +14,7 @@
             <li><a href="../profile.php">Профиль</a></li>
             <li><a href="../index.php">Главная</a></li>
             <li><a href="../news.php">Новости</a></li>
-            <li><a href="#">Сообщества</a></li>
+            <li><a href="../community.php">Сообщества</a></li>
             <li><a href="#">Правила</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>

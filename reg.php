@@ -21,6 +21,9 @@
                 <input type="password" class="form-control" name="pass" id="pass" placeholder="Пароль">
                 <br>
                 <input type="submit" value="Зарегистрироваться">
+                <p>
+                    У вас есть аккаунт? - <a href="auth.php">авторизируйтесь</a>
+                </p>
             </form>
         </div>
     </div>

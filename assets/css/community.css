@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+.comm_block {
+    width: 800px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(67, 67, 134);
+}
+
+.block__community {
+    border-bottom: 2px solid black;
+    padding: 20px 20px;
+    display: flex;
+}
+
+.block__community p {
+    font-weight: bold;
+    display: block;
+    margin-top: 70px;
+}
+
+.block__community img {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.info_comm {
+    display: flex;
+    flex-direction: column;
+}
