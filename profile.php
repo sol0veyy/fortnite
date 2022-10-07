@@ -23,6 +23,7 @@
         if ($_SESSION['user']['login']) {
             echo '<img src="' . $_SESSION['user']['photo'] . '">';
             echo '<p> ' . $_SESSION['user']['login'] . ' </p>';
+            echo '<a href="settings.php">Изменить</a>';
             echo '<a href="vendor/exit.php">Выйти</a>';
         } else {
             echo '
