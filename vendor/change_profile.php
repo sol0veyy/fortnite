@@ -5,6 +5,7 @@
 
     $login = filter_var(trim($_POST['login']));
     $avatar = $_FILES['avatar']['name'];
+    $loginErr = "";
     if ($avatar) {
         $avatar = 'image/' . time() . $avatar;
     }
