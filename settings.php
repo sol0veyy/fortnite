@@ -20,5 +20,9 @@
         <br><br>
         <input type="submit" value="Изменить">
     </form>
+    <br>
+    <button onclick="test()">Отмена</button>
+
+    <script src="main.js"></script>
 </body>
 </html>

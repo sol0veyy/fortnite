@@ -18,14 +18,15 @@
         $change_data = "`photo` = '$avatar'";
     }
 
-    echo $change_data;
-
-    $change = mysqli_query($mysql, "UPDATE `user` SET $change_data WHERE `user`.`id` = '{$_SESSION['user']['id']}'");
-
     $result = mysqli_query($mysql, "SELECT * FROM `user` WHERE `id` = '{$_SESSION['user']['id']}'");
-    if (mysqli_num_rows($result) > 0) {
+    $infoLogin = mysqli_query($mysql, "SELECT * FROM `user` WHERE `login` = '$login'");
+
+    if (mysqli_num_rows($result) > 0 && mysqli_num_rows($infoLogin) == 0) {
+
+        $change = mysqli_query($mysql, "UPDATE `user` SET $change_data WHERE `user`.`id` = '{$_SESSION['user']['id']}'");
+        $resultNew = mysqli_query($mysql, "SELECT * FROM `user` WHERE `id` = '{$_SESSION['user']['id']}'");
         
-        $user = mysqli_fetch_assoc($result);
+        $user = mysqli_fetch_assoc($resultNew);
 
         $_SESSION['user'] = [
             "id" => $user['id'],
@@ -36,4 +37,6 @@
 
         header('Location: ../profile.php');
 
+    } else {
+        echo "Логин занят!";
     }
