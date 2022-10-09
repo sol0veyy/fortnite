@@ -52,3 +52,8 @@
 .block__news img {
     width: 100%;
 }
+
+.block__news a {
+    color: #000;
+    text-decoration: none;
+}

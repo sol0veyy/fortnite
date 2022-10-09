@@ -17,10 +17,13 @@
     <div class="news">
         <?php
             while ($news = mysqli_fetch_array($result)) {
+                $linkId = "post.php?id=" . "{$news['id']}";
                 echo "<div class='block__news'>";
+                    echo "<a href='$linkId'>";
                     echo "<img src='{$news['picture']}'>";
                     echo "<h1>{$news['header']}</h1>";
                     echo "<p>{$news['time_text']}</p>";
+                    echo "</a>";
                 echo "</div>";
             }
         ?>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/news.css">
+    <link rel="stylesheet" href="assets/css/settings.css">
     <title>Настройки</title>
 </head>
 <body>
@@ -18,7 +19,13 @@
         <br>
         <input name="avatar" type="file">
         <br><br>
-        <input type="submit" value="Изменить">
+        <div class="bottom">
+            <input type="submit" value="Изменить">
+            <?php
+                session_start();
+                echo '<p>' . $_SESSION['message'] . '</p>';
+            ?>
+        </div>
     </form>
     <br>
     <button onclick="test()">Отмена</button>

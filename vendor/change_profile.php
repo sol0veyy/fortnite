@@ -14,8 +14,12 @@
         $change_data = "`login` = '$login', `photo` = '$avatar'";
     } elseif ($login) {
         $change_data = "`login` = '$login'";
-    } else {
+    } elseif ($avatar) {
         $change_data = "`photo` = '$avatar'";
+    } else {
+        // $_SESSION['message'] = "";
+        // header('Location: ../settings.php');
+        // exit;
     }
 
     $result = mysqli_query($mysql, "SELECT * FROM `user` WHERE `id` = '{$_SESSION['user']['id']}'");
