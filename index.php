@@ -9,5 +9,12 @@
 </head>
 <body>
     <?php require('vendor/header.php'); ?>
+        
+    <Carousel>
+        <template #slides>
+            <Slide v-for="slide in 10" :key="slide">
+            </Slide>
+        </template>
+    </Carousel>
 </body>
 </html>

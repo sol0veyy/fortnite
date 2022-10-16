@@ -25,7 +25,7 @@
                     echo "<p>{$news['time_text']}</p>";
                     echo "</a>";
                 echo "</div>";
-            }
+            }   
         ?>
     </div>
 </body>

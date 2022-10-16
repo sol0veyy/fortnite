@@ -28,8 +28,10 @@
         </div>
     </form>
     <br>
-    <button onclick="test()">Отмена</button>
-
+    <button onclick="but_del()">Удалить аккаунт</button>
+    <br><br>
+    <button onclick="cancel()">Отмена</button>
+    <div class="data-php" data-pass="<?=$_SESSION['user']['pass'];?>"></div>
     <script src="main.js"></script>
 </body>
 </html>
