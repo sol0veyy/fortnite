@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+html, body {
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    margin-bottom: 30px;
+    background: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box-button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: 60px;
+    gap: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.second-slide {
+    background: rgb(178, 234, 252);
+}
+
+button {
+    background: rgb(53, 71, 87, 0.7);
+    border: none;
+    padding: 5px 80px;
+    font-size: .9rem;
+}
+
+button:active {
+    background: rgb(178, 234, 252, 0.5);
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.slider {
+    width: 100%;
+    height: 85vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    transition: all ease 0.6s;
+}

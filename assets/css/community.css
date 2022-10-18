@@ -6,11 +6,12 @@
 
 body {
     background-color: #F1F4F6;
+    height: 100vh;
 }
 
 .comm_block {
     width: 800px;
-    height: 100vh;
+    height: 90vh;
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
