@@ -1,6 +1,7 @@
 <?php
     require('vendor/mysql.php');
     $result = $mysql -> query("SELECT * FROM `news` ORDER BY id DESC LIMIT 3");
+    $resultNews = $mysql -> query("SELECT * FROM `news`");
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +35,21 @@
         <button class="first-slide"></button>
         <button class="second-slide"></button>
         <button class="third-slide"></button>
+    </div>
+
+    <div class="news">
+        <?php
+            while ($news = mysqli_fetch_array($resultNews)) {
+                $linkId = "post.php?id=" . "{$news['id']}";
+                echo "<div class='block__news'>";
+                    echo "<a href='$linkId'>";
+                    echo "<img src='{$news['picture']}'>";
+                    echo "<h1>{$news['header']}</h1>";
+                    echo "<p>{$news['time_text']}</p>";
+                    echo "</a>";
+                echo "</div>";
+            }   
+        ?>
     </div>
     
     <script src="components/carousel.js"></script>

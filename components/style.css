@@ -13,7 +13,6 @@ html, body {
 
 .container {
     margin-bottom: 30px;
-    margin: 0 auto;
     background: #f1f1f1;
 }
 
@@ -51,13 +50,11 @@ img {
 .slider {
     width: 100%;
     height: 85vh;
-    margin: 0 auto;
     overflow: hidden;
 }
 
 .slider-line {
     display: flex;
-    width: 100%;
     position: relative;
     left: -100%;
     transition: all ease 0.6s;
