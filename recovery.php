@@ -6,7 +6,7 @@
     <title>Восстановление пароля</title>
 </head>
 <body>
-    <h1 class="section-title">Восстановление пароля</h1>
+                <h1 class="section-title">Восстановление пароля</h1>
                 <form class="row g-3" method="post">
 
                     <div class="col-md-6 offset-md-3">
@@ -21,6 +21,6 @@
                         <button type="submit" name="recover" class="btn btn-danger">Отправить</button>
                     </div>
                 </form>
-    
+
 </body>
 </html>
