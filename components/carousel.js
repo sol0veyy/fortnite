@@ -6,19 +6,19 @@ const secondButton = document.querySelector('.second-slide');
 const thirdButton = document.querySelector('.third-slide');
 
 document.querySelector('.first-slide').addEventListener('click', function(){
-    sliderLine.style.left = 100 + '%';
+    sliderLine.style.left = 0;
     clearButton()
     buttons[0].style.background = 'rgb(178, 234, 252)';
 });
 
 document.querySelector('.second-slide').addEventListener('click', function(){
-    sliderLine.style.left = 0;
+    sliderLine.style.left = -100 + '%';
     clearButton()
     buttons[1].style.background = 'rgb(178, 234, 252)';
 });
 
 document.querySelector('.third-slide').addEventListener('click', function(){
-    sliderLine.style.left = -100 + '%';
+    sliderLine.style.left = -200 + '%';
     clearButton()
     buttons[2].style.background = 'rgb(178, 234, 252)';
 });
