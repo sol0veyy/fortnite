@@ -18,6 +18,8 @@
             <form action="vendor/check.php" method="post">
                 <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
                 <br>
+                <input type="email" class="form-control" name="pass" id="pass" placeholder="Почта">
+                <br>
                 <input type="password" class="form-control" name="pass" id="pass" placeholder="Пароль">
                 <br>
                 <input type="submit" value="Зарегистрироваться">

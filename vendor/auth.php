@@ -14,7 +14,8 @@
             "id" => $user['id'],
             "login" => $user['login'],
             "pass" => $user['pass'],
-            "photo" => $user['photo']
+            "photo" => $user['photo'],
+            "email" => $user['email']
         ];
 
         header('Location: ../profile.php');

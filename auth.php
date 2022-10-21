@@ -14,7 +14,7 @@
     <?php require('vendor/header.php'); ?>
     <div class="main">
         <div class="auth">
-            <h1>Вход</h1>
+            <h1>Авторизация</h1>
             <form action="vendor/auth.php" method="post">
                 <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
                 <br>
@@ -25,7 +25,7 @@
                     У вас нет аккаунта? - <a href="reg.php">зарегистрируйтесь</a>!
                 </p>
                 <p>
-                    Забыли пароль? -<a href="recovery.php">Восстановить пароль</a>
+                    <a href="recovery.php">Восстановление пароль</a>
                 </p>
             </form>
         </div>

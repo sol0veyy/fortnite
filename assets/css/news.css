@@ -57,3 +57,50 @@
     color: #000;
     text-decoration: none;
 }
+
+/* Посты */
+
+.article {
+    background-color: #222222;
+    color: white;
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 150%;
+}
+
+.name_com {
+    display: flex;
+    justify-content: center;
+}
+
+.article h2 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Лайк */
+
+.likes {
+    display: flex;
+    margin-top: 20px;
+    justify-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.heart {
+    width: 30px;
+    color: white;   
+}
+
+.likes button {
+    background-color: #222222;
+    border: none;
+    cursor: pointer;
+}
+
+.heart path {
+    fill: white;
+}
