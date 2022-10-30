@@ -5,8 +5,11 @@
 }
 
 body {
-    background-color: #F1F4F6;
-    height: 100vh;
+    background-color: #3d3d3d;
+}
+
+a {
+    text-decoration: none;
 }
 
 .comm_block {
@@ -14,8 +17,7 @@ body {
     height: 90vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px #888888;
+    background-color: #222222;
 }
 
 .block__community {
@@ -33,11 +35,12 @@ body {
 .block__community img {
     width: 150px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid red;
     margin-bottom: 10px;
 }
 
 .info_comm {
+    color: #fff;
     display: flex;
     flex-direction: column;
     margin-left: 20px;

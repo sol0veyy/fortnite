@@ -1,6 +1,7 @@
 <?php
     $login = filter_var(trim($_POST['login']));
     $pass = filter_var(trim($_POST['pass']));
+    $email = filter_var(trim($_POST['email']));
 
     if (mb_strlen($login) < 3 || mb_strlen($login) > 30) {
         echo "Недопустимая длина логина";
@@ -12,8 +13,8 @@
     }
 
     require('mysql.php');
-    $mysql -> query("INSERT INTO `user` (`login`, `pass`)
-    VALUES('$login', '$pass')");
+    $mysql -> query("INSERT INTO `user` (`login`, `pass`, `email`)
+    VALUES('$login', '$pass', '$email')");
 
     header('Location: ../auth.php');
 ?>

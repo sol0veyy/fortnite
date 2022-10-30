@@ -45,7 +45,7 @@
                     echo "<a href='$linkId'>";
                     echo "<img src='{$news['picture']}'>";
                     echo "<h1>{$news['header']}</h1>";
-                    echo "<p>{$news['time_text']}</p>";
+                    echo "<p class='time'>{$news['time_text']}</p>";
                     echo "</a>";
                 echo "</div>";
             }   

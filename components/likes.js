@@ -1,22 +1,16 @@
-// document.querySelector('.upLikes').addEventListener('click', function(){
-//     if () {
-        
-//     }
-// })
+let xmlhttp = new XMLHttpRequest();
 
-$("img.heart").each(function () {
-    var $img = $(this);
-    var imgClass = $img.attr("class");
-    var imgURL = $img.attr("src");
-    $.get(imgURL, function (data) {
-        var $svg = $(data).find("svg");
-        if (typeof imgClass !== "undefined") {
-            $svg = $svg.attr("class", imgClass + " replaced-svg");
+function upLikes(colArticle) {
+    let colLikes = document.getElementById("colLikes"+colArticle);
+    let like = document.getElementById("like"+colArticle);
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            colLikes.innerHTML = this.responseText;
+            like.classList.toggle('like-on');
         }
-        $svg = $svg.removeAttr("xmlns:a");
-        if (!$svg.attr("viewBox") && $svg.attr("height") && $svg.attr("width")) {
-            $svg.attr("viewBox", "0 0 " + $svg.attr("height") + " " + $svg.attr("width"))
-        }
-        $img.replaceWith($svg);
-    }, "xml");
-});
+    }
+    let idArticle = colLikes.dataset.idarticle;
+    xmlhttp.open("GET", "../vendor/likes.php?idArticle=" + idArticle, true);
+    xmlhttp.send();
+}

@@ -4,6 +4,10 @@
     font-family: 'Play', sans-serif;
 }
 
+body {
+    background-color: #3d3d3d;
+}
+
 /* Header */
 
 .header {
@@ -11,10 +15,12 @@
     justify-content: flex-end;
     width: 100%;
     height: 60px;
-    background-color: #000;
+    background-color: #222222;
+    border-bottom: 2px solid red;
 }
 
 .header ul {
+    list-style-type: none;
     display: flex;
     gap: 30px;
     align-items: center;
@@ -42,11 +48,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 500px);
     justify-content: center;
-    gap: 30px;
+    align-content: flex-end;
+    row-gap: 30px;
+    column-gap: 90px;
 }
 
 .block__news {
     width: 500px;
+    display: flex;
+    align-content: space-around;
+    padding: 30px;
+    background-color: #222222;
+    border-radius: 30px;
+    border: 2px solid red;
 }
 
 .block__news img {
@@ -54,7 +68,7 @@
 }
 
 .block__news a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -66,7 +80,8 @@
     width: 500px;
     margin: 40px auto;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 30px;
+    border: 2px solid red;
     line-height: 150%;
 }
 
@@ -85,22 +100,15 @@
 .likes {
     display: flex;
     margin-top: 20px;
-    justify-items: center;
+    align-items: center;
     gap: 10px;
     font-size: 18px;
 }
 
-.heart {
-    width: 30px;
-    color: white;   
-}
-
-.likes button {
-    background-color: #222222;
-    border: none;
-    cursor: pointer;
-}
-
-.heart path {
+.like-off {
     fill: white;
+}
+
+.like-on {
+    fill: red;
 }

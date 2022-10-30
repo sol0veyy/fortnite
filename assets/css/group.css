@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.infoGroup {
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.infoGroup img {
+    width: 150px;
+    border-radius: 50%;
+}

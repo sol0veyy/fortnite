@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reg-auth.css">
     <link rel="stylesheet" href="assets/css/news.css">
+    <link rel="stylesheet" href="assets/css/reg-auth.css">  
     <title>Вход</title>
 </head>
 
@@ -25,7 +25,7 @@
                     У вас нет аккаунта? - <a href="reg.php">зарегистрируйтесь</a>!
                 </p>
                 <p>
-                    <a href="recovery.php">Восстановление пароль</a>
+                    <a href="recovery.php">Восстановить пароль</a>
                 </p>
             </form>
         </div>
