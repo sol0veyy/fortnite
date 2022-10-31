@@ -63,6 +63,6 @@
         }
     ?>
 
-    <script src="components/likes.js"></script>
+    <script src="components/ajax.js"></script>
 </body>
 </html>

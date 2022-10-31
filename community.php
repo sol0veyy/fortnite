@@ -18,22 +18,29 @@
     <div class="comm_block">
             <?php
                 if ($_SESSION['user']['login']) {
+                    $colCom = 0;
                     while ($community = mysqli_fetch_array($result)) {
+                        $resultSub = $mysql -> query("SELECT COUNT(1) FROM `com_sub` WHERE `com_id` = {$community['id']}");
+                        $colSub = mysqli_fetch_array($resultSub);
                         $linkId = "group.php?id=" . "{$community['id']}";
-                        echo "<a href='{$linkId}'>";
                         echo "<div class='block__community'>";
+                            echo "<a href='{$linkId}'>";
                             echo "<img src='{$community['photo']}'>";
                             echo '<div class="info_comm">';
                             echo "<h1>{$community['name']}</h1>";
-                            echo "<p>{$community['sub']} подписчиков</p>";
+                            echo "</a>";
+                            echo "<p id='colSub{$colCom}' data-idcom='{$community['id']}'>{$colSub['COUNT(1)']} подписчиков</p>";
+                            echo "<button onclick=upSub({$colCom})>Подписаться</button>";
                             echo '</div>';
                         echo "</div>";
-                        echo "</a>";
+                        $colCom++;
                     }
                 } else {
                     header("Location: auth.php");
                 }
             ?>
     </div>
+
+    <script src="components/ajax.js"></script>
 </body>
 </html>
