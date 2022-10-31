@@ -19,14 +19,15 @@ function upLikes(colArticle) {
 // Обработка подписчиков
 function upSub(colCom) {
     let colSub = document.getElementById("colSub"+colCom);
+    let buttonSub = document.getElementById("buttonSub"+colCom); 
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             colSub.innerHTML = this.responseText;
+            buttonSub.classList.toggle('sub-on');
         }
     }
     let idCom = colSub.dataset.idcom;
-    console.log(idCom);
     xmlhttp.open("GET", "../vendor/sub.php?idCom=" + idCom, true);
     xmlhttp.send();
 }

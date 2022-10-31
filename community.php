@@ -22,15 +22,19 @@
                     while ($community = mysqli_fetch_array($result)) {
                         $resultSub = $mysql -> query("SELECT COUNT(1) FROM `com_sub` WHERE `com_id` = {$community['id']}");
                         $colSub = mysqli_fetch_array($resultSub);
-                        $linkId = "group.php?id=" . "{$community['id']}";
+                        $resultColor = $mysql -> query("SELECT * FROM `com_sub` WHERE `com_id` = {$community['id']} AND `user_id` = {$_SESSION['user']['id']}");
+                        $colorSub = mysqli_fetch_array($resultColor);
+                        $resultText = $mysql -> query("SELECT * FROM `com_sub` WHERE `com_id` = {$community['id']}");
+                        $textSub = mysqli_fetch_array($resultText);
+                        $linkId = "group.php?id=" . "{$community['id']}"; 
                         echo "<div class='block__community'>";
                             echo "<a href='{$linkId}'>";
                             echo "<img src='{$community['photo']}'>";
                             echo '<div class="info_comm">';
                             echo "<h1>{$community['name']}</h1>";
                             echo "</a>";
-                            echo "<p id='colSub{$colCom}' data-idcom='{$community['id']}'>{$colSub['COUNT(1)']} подписчиков</p>";
-                            echo "<button onclick=upSub({$colCom})>Подписаться</button>";
+                            echo "<p id='colSub{$colCom}' data-idcom='{$community['id']}'>{$colSub['COUNT(1)']} {$textSub['text']}</p>";
+                            echo "<button id='buttonSub{$colCom}' class='sub-off {$colorSub['color']}' onclick=upSub({$colCom})></button>";
                             echo '</div>';
                         echo "</div>";
                         $colCom++;

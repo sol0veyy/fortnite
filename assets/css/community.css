@@ -47,3 +47,26 @@ a {
     margin-left: 20px;
     justify-content: space-evenly;
 }
+
+/* Кнопка подписки/отписки */
+
+.info_comm button {
+    width: 150px;
+    color: #fff;
+}
+
+.sub-off {
+    background-color: red;
+}
+
+.sub-off::after {
+    content: "Подписаться";
+}
+
+.sub-on {
+    background-color: #444444;
+}
+
+.sub-on::after {
+    content: "Отписаться";
+}

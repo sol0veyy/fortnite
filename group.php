@@ -22,11 +22,17 @@
 
     <!-- Информация о сообществе -->
     <?php
+        $resultSub = $mysql -> query("SELECT COUNT(1) FROM `com_sub` WHERE `com_id` = {$_GET['id']}");
+        $colSub = mysqli_fetch_array($resultSub);
+        $resultColor = $mysql -> query("SELECT * FROM `com_sub` WHERE `com_id` = {$_GET['id']} AND `user_id` = {$_SESSION['user']['id']}");
+        $colorSub = mysqli_fetch_array($resultColor);
+        $resultText = $mysql -> query("SELECT * FROM `com_sub` WHERE `com_id` = {$_GET['id']}");
+        $textSub = mysqli_fetch_array($resultText);
         echo "
             <div class='infoGroup'>
                 <img src='{$group['photo']}'>
                 <h2>{$group['name']}</h2>
-                <p>{$group['sub']} подписчиков</p>
+                <p id='colSub' data-idcom='{$community['id']}'>{$colSub['COUNT(1)']} {$textSub['text']}</p>
             </div>
         ";
     ?>

@@ -19,6 +19,9 @@
         if ($_SESSION['user']['login']) {
             $colArticle = 0;
             while ($article = mysqli_fetch_array($result)) {
+            $resultComSub = $mysql -> query("SELECT COUNT(1) FROM `com_sub` WHERE `com_id` = {$article['community_id']} AND `user_id` = {$_SESSION['user']['id']}");
+            $comSub = mysqli_fetch_array($resultComSub);
+            if ($comSub['COUNT(1)']) {
                 $resultLikes = $mysql -> query("SELECT COUNT(1) FROM `article_likes` WHERE `article_item_id` = {$article['id']}");
                 $colLikes = mysqli_fetch_array($resultLikes);
                 $resultColorLike = $mysql -> query("SELECT * FROM `article_likes` WHERE `article_item_id` = {$article['id']} AND `user_id` = {$_SESSION['user']['id']}");
@@ -39,8 +42,11 @@
                 ";
                 $colArticle++;
             }
+
             $_SESSION['colArticle'] = $colArticle;
             echo "<div id='info' data-colarticle='{$_SESSION['colArticle']}'></div>";
+            }
+
         } else {
             header("Location: auth.php");
         }
