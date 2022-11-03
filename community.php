@@ -15,7 +15,24 @@
 </head>
 <body>
     <?php require('vendor/header.php'); ?>
+
     <div class="comm_block">
+
+        <!-- Форма создании сообщества -->
+        <button class="bt-createCom" onclick="openForm()">Создать сообщество</button>
+        <div id="createCom" class="createCom">
+            <form action="vendor/create-com.php" method="post" enctype="multipart/form-data">
+                <label>Название:</label>
+                <input type="text" name="name_com" required>
+                <br><br>
+                <label>Аватарка:</label>
+                <input type="file" name="avatar">
+                <br><br>
+                <input type="submit" value="Создать">
+                <input type="button" value="Отмена" onclick="closeForm()">
+              </form>
+        </div>
+
             <?php
                 if ($_SESSION['user']['login']) {
                     $colCom = 0;
@@ -44,7 +61,8 @@
                 }
             ?>
     </div>
-
+    
+    <script src="components/community.js"></script>
     <script src="components/ajax.js"></script>
 </body>
 </html>

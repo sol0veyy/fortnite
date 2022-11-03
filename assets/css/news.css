@@ -59,8 +59,6 @@ body {
     align-content: space-around;
     padding: 30px;
     background-color: #222222;
-    border-radius: 30px;
-    border: 2px solid red;
 }
 
 .block__news img {
