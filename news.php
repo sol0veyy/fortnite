@@ -1,7 +1,7 @@
 <?php
     session_start();
     require('vendor/mysql.php');
-    $result = $mysql -> query("SELECT * FROM `article`");
+    $result = $mysql -> query("SELECT * FROM `article` ORDER BY id DESC;");
 ?>
 
 <!DOCTYPE html>

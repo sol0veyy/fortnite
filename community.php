@@ -1,7 +1,12 @@
 <?php
     session_start();
     require('vendor/mysql.php');
-    $result = $mysql -> query("SELECT * FROM `community`");
+
+    if ($_GET['tab']) {
+        $result = $mysql -> query("SELECT * FROM `community` WHERE `admin` = {$_SESSION['user']['id']}");
+    } else {
+        $result = $mysql -> query("SELECT * FROM `community`");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +23,14 @@
 
     <div class="comm_block">
 
+        <!-- Вывод сообществ -->
+        <div class="show-com">
+            <a href="community.php">Все сообщества</a>
+            <a href="community.php?tab=admin">Управление</a>
+            <button class="bt-createCom" onclick="openForm()">Создать сообщество</button>
+        </div>
+
         <!-- Форма создании сообщества -->
-        <button class="bt-createCom" onclick="openForm()">Создать сообщество</button>
         <div id="createCom" class="createCom">
             <form action="vendor/create-com.php" method="post" enctype="multipart/form-data">
                 <label>Название:</label>
