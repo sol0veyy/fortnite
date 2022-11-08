@@ -11,10 +11,10 @@
 <body>
     <div class="header">
         <ul>
-            <li><a href="../profile.php">Профиль</a></li>
             <li><a href="../index.php">Главная</a></li>
             <li><a href="../news.php">Новости</a></li>
             <li><a href="../community.php">Сообщества</a></li>
+            <li><a href="../profile.php">Профиль</a></li>
         </ul>
     </div>
 </body>
