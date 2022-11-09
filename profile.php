@@ -1,9 +1,6 @@
 <?php
     session_start();
-    require('vendor/mysql.php');
-    $sql = 'SELECT photo FROM user';
-    $result = mysqli_query($mysql, $sql);
-    $photo = mysqli_fetch_array($result);
+    require_once 'vendor/mysql.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,23 +17,38 @@
     <?php require('vendor/header.php') ?>
     <div class="profile">
     <?php
-        if ($_SESSION['user']['login']) {
+
+        // Вывод профиля другого юзера
+        if ($_GET['id']) {
+
+            $result = $mysql -> query("SELECT * FROM `user` WHERE id = {$_GET['id']}");
+            $resultProfile = mysqli_fetch_array($result);
+
             echo '<div class="info_profile">';
-            echo '<img src="' . $_SESSION['user']['photo'] . '">';
-            echo '<p> ' . $_SESSION['user']['login'] . ' </p>';
-            echo '</div>';
-            echo '<div class="change_profile">';
-            echo '<a href="settings.php">Изменить</a>';
-            echo '<a href="vendor/exit.php">Выйти</a>';
+            echo '<img src="' . $resultProfile['photo'] . '">';
+            echo '<p> ' . $resultProfile['login'] . ' </p>';
             echo '</div>';
         } else {
-            echo '
-            <img src="image/avatar.png">
-            <div class="reg-auth">
-                <a href="auth.php">Авторизоваться</a>
-            </div>
-            ';
+            // Вывод своего профиля
+            if ($_SESSION['user']['login']) {
+                echo '<div class="info_profile">';
+                echo '<img src="' . $_SESSION['user']['photo'] . '">';
+                echo '<p> ' . $_SESSION['user']['login'] . ' </p>';
+                echo '</div>';
+                echo '<div class="change_profile">';
+                echo '<a href="settings.php">Изменить</a>';
+                echo '<a href="vendor/exit.php">Выйти</a>';
+                echo '</div>';
+            } else {
+                echo '
+                <img src="image/avatar.png">
+                <div class="reg-auth">
+                    <a href="auth.php">Авторизоваться</a>
+                </div>
+                ';
+            }
         }
+
     ?>
     </div>
 </body>

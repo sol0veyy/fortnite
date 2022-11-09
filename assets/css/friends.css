@@ -1,0 +1,43 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.friends_block {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #222222;
+}
+
+.block__friends {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #464646;
+    padding: 20px 20px;
+    color: #fff;
+}
+
+.block__friends img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.info_friend {
+    margin-left: 20px;
+}
+
+/* Форма добавлении в друзья */
+
+.friends_block button {
+    margin: 20px;
+}
+
+.friends_block form {  
+    display: none;
+    margin-left: 20px;
+    color: #fff;    
+}

@@ -14,6 +14,7 @@
             <li><a href="../index.php">Главная</a></li>
             <li><a href="../news.php">Новости</a></li>
             <li><a href="../community.php">Сообщества</a></li>
+            <li><a href="../friends.php">Друзья</a></li>
             <li><a href="../profile.php">Профиль</a></li>
         </ul>
     </div>

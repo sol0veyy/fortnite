@@ -34,6 +34,7 @@ a {
 
 .block__community img {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 2px solid red;
     margin-bottom: 10px;
