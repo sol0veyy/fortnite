@@ -1,6 +1,10 @@
-a {
+.friends_block a {
     text-decoration: none;
     color: #fff;
+}
+
+.action {
+    margin-left: 20px;
 }
 
 .friends_block {
@@ -33,7 +37,7 @@ a {
 /* Форма добавлении в друзья */
 
 .friends_block button {
-    margin: 20px;
+    margin: 20px 0 20px 20px;
 }
 
 .friends_block form {  

@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <?php require('vendor/header.php'); ?>
     <div class="main">
         <div class="auth">
             <h1>Авторизация</h1>

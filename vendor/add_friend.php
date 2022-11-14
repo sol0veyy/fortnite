@@ -8,7 +8,7 @@
     $result = $mysql -> query("SELECT * FROM `user` WHERE login = '$login'");
     $friendID = mysqli_fetch_array($result); 
 
-    $mysql -> query("INSERT INTO `user_friends` (`user`, `friend`) VALUES ('{$_SESSION['user']['id']}', '{$friendID['id']}')");
+    $mysql -> query("INSERT INTO `requests_friend` (`user`, `friend`) VALUES ('{$friendID['id']}', '{$_SESSION['user']['id']}')");
 
     header("Location: ../friends.php");
 

@@ -1,5 +1,6 @@
 <?php
     require('vendor/mysql.php');
+    session_start();
     $result = $mysql -> query("SELECT * FROM `news` ORDER BY id DESC LIMIT 3");
     $resultNews = $mysql -> query("SELECT * FROM `news`");
 ?>
@@ -16,6 +17,14 @@
 </head>
 <body>
     
+    <?php
+    
+        if (!$_SESSION['user']['login']) {
+            header("Location: auth.php");
+        }
+
+    ?>
+
     <?php require('vendor/header.php'); ?>
 
     <div class="container">
