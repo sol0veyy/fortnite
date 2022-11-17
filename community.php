@@ -72,7 +72,7 @@
                 }
             ?>
     </div>
-    
+
     <script src="components/community.js"></script>
     <script src="components/ajax.js"></script>
 </body>

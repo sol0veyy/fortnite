@@ -4,6 +4,10 @@
     $result = $mysql -> query("SELECT * FROM `article` ORDER BY id DESC;");
 ?>
 
+<?php      
+        require_once('vendor/requireSession.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

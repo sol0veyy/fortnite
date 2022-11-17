@@ -4,6 +4,10 @@
     $news = mysqli_fetch_array($result)
 ?>
 
+<?php      
+        require_once('vendor/requireSession.php')
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>

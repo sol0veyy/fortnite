@@ -17,12 +17,8 @@
 </head>
 <body>
     
-    <?php
-    
-        if (!$_SESSION['user']['login']) {
-            header("Location: auth.php");
-        }
-
+    <?php      
+        require_once('vendor/requireSession.php')
     ?>
 
     <?php require('vendor/header.php'); ?>
