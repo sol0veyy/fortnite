@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.block_viewMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 93.8vh;
+    background-color: #222222;
+}
+
+.submit_message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.submit_message form {
+    display: flex;
+    align-items: center;
+}
+
+.buttonSubmit {
+    margin-left: 10px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #222222;
+    border: 1px solid red;
+}
+
+.messages {
+    font-size: 18px;
+    margin: 40px;
+}
+
+.user_view_messages {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.friend_view_messages {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.submit {
+    width: 25vw;
+    height: 16px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    background-color: #222222;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 10px;
+}

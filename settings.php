@@ -1,7 +1,3 @@
-<?php      
-        require_once('vendor/requireSession.php')
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
