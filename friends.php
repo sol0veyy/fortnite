@@ -68,6 +68,7 @@
                                     <h2>{$friend['login']}</h2>
                                     </a>
                                 </div>
+                                <a class='action' href='vendor/add_message.php?id={$friend['id']}'>Написать сообщение</a>
                                 <a class='action' href='vendor/del_friend.php?id={$friend['id']}'>Удалить друга</a>
                             </div>
                         ";

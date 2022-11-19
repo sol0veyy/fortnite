@@ -18,7 +18,7 @@
     <div class="block_viewMessage">
         <div class="messages">
             <?php
-                $resultMessages = $mysql -> query("SELECT * FROM `message` WHERE `user` = '{$_SESSION['user']['id']}' OR `user` = '{$_GET['id']}' AND `friend` = '{$_GET['id']}' OR `friend` = '{$_SESSION['user']['id']}'");
+                $resultMessages = $mysql -> query("SELECT * FROM `message` WHERE (`user` = '{$_SESSION['user']['id']}' OR `user` = '{$_GET['id']}') AND (`friend` = '{$_GET['id']}' OR `friend` = '{$_SESSION['user']['id']}') ORDER BY id ASC");
                 while($messages = mysqli_fetch_array($resultMessages)) {
                     if ($messages['user'] == $_SESSION['user']['id']) {
                         echo "

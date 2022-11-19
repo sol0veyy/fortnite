@@ -40,6 +40,11 @@
     margin: 40px;
 }
 
+.user_view_messages, .friend_view_messages {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .user_view_messages {
     text-align: right;
     margin-top: 15px;

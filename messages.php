@@ -29,7 +29,7 @@
                         <div class='info_friend'>
                             <h2>{$infoFriend['login']}</h2>
                             </a>
-                        <div>
+                        </div>
                     </div>
                 ";
             }
