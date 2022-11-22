@@ -46,11 +46,13 @@
 }
 
 .user_view_messages {
+    word-wrap: break-word;
     text-align: right;
     margin-top: 15px;
 }
 
 .friend_view_messages {
+    word-wrap: break-word;
     text-align: left;
     margin-top: 15px;
 }

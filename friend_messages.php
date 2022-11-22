@@ -44,6 +44,15 @@
                 ?>
                 <input class="buttonSubmit" type="submit" value="Отправить">
             </form>
+
+            <?php
+                // Ограничение размера сообщения
+                if ($_SESSION['message']['error']) {
+                    echo "
+                        
+                    ";
+                } 
+            ?>
         </div>
     </div>
 

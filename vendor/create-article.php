@@ -11,5 +11,4 @@
     $mysql -> query("INSERT INTO `article` (`user_id`, `text_article`, `community_id`, `name_com`) VALUES ('{$_SESSION['user']['id']}', '{$text}', '{$_GET['com']}', '{$resultCom['name']}')");
 
     header("Location: ../group.php?id={$_GET['com']}");
-
 ?>

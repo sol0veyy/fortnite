@@ -73,6 +73,7 @@ body {
 /* Посты */
 
 .article {
+    word-wrap: break-word;
     background-color: #222222;
     color: white;
     width: 500px;
